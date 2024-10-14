@@ -140,12 +140,7 @@
 
 - (void) launchAppStore:(NSString*) appId
 {
-    NSString* iTunesLink;
-    if([[[UIDevice currentDevice] systemVersion] floatValue] >= 11){
-        iTunesLink = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/xy/app/foo/id%@?action=write-review", appId];
-    }else{
-        iTunesLink = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@&action=write-review", appId];
-    }
+    NSString* iTunesLink = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/xy/app/foo/id%@?action=write-review", appId];
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
     

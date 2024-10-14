@@ -16,7 +16,11 @@
         <clobbers target="LaunchReview"/>
     </js-module>
 
-    <dependency id="cordova-plugin-device" version="^2.0.3" />
+    <engines>
+        <engine name="cordova" version=">=10.0.0"/>
+        <engine name="cordova-android" version=">=10.0.0"/>
+        <engine name="cordova-ios" version=">=6.0.0"/>
+    </engines>
 
     <!-- ios -->
     <platform name="ios">
